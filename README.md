@@ -71,7 +71,9 @@ The system will prefer local templates (with the same name) over the global ones
 
 You can use the following parameters in the templates (even in file names):
 
-- module - given module name 
+- module - given module name (e.g. Example)
+- module_lowercased - given module name (e.g. example)
+- module_lowercased_plural - given module name (e.g. examples)
 - project - based on `.xcodeproj` or `.xcworkspace` name
 - author - based on git config
 - date - current date in local short format
