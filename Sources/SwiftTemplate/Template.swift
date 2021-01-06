@@ -17,6 +17,8 @@ public struct Template {
     
     public struct Context {
         let module: String
+        var module_lowercased: String { self.module.lowercased() }
+        var module_lowercased_plural: String { self.module.lowercased() + "s" }
         let project: String
         let author: String
         let date: Date
@@ -51,6 +53,8 @@ public struct Template {
     var parameters: [String: String] {
         [
             "module": self.context.module,
+            "module_lowercased": self.context.module_lowercased,
+            "module_lowercased_plural": self.context.module_lowercased_plural,
             "project": self.context.project,
             "author": self.context.author,
             "date": self.dateFormatter.string(from: self.context.date)
